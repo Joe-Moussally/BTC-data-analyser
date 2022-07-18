@@ -1,7 +1,9 @@
-1- executing 'pip install pandas' in cmd to install 'pandas' package
+1- execute 'pip install pandas' in cmd to install 'pandas' package
 
-2- executing 'pip install openpyxl' in cmd
+2- execute 'pip install openpyxl' in cmd to install packages for excel reader
 
-3- To execute the script for reading a specific excel file, execute the following command in cmd (same directory as the python file):
+3- To execute the script for reading a specific excel file, execute the following command in cmd (same directory as the script file):
 
-python BTC-Analyser.py 'excel file path'
+python BTC-Analyser.py
+
+4- a message will be display in cmd asking for a file path, enter the path of the file needed to be anaylzed (ex: C:\BAVERAGE-USD.csv)
