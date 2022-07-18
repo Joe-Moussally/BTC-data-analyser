@@ -1,1 +1,3 @@
-1- install 'pandas' package by executing 'pip install pandas'
+1- executing 'pip install pandas' in cmd to install 'pandas' package
+
+2- executing 'pip install openpyxl' in cmd
