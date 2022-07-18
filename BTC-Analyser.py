@@ -20,12 +20,21 @@ def analyser():
 
     #calculating for each month
     #average each month
-    years = []
+    dates = []
     for element in data_list: #extract the years available
         print(element[0].year)
         time = {'year':element[0].year,'month':element[0].month}
-        if(time not in years):
-            years.append(time)
-    print(years)
+        if(time not in dates):
+            dates.append(time)
+    print(dates)
+
+    #calculate the average for each month
+    for date in dates:
+        values = []
+        for value in data_list:
+            value_date = {'year':value[0].year,'month':value[0].month}
+            if(date == value_date):
+                values.append(value[1])
+        print('VALUESSS',values)
 
 analyser()
