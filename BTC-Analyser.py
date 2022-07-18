@@ -9,11 +9,23 @@ def analyser():
     data_list = data.values.tolist()
     print(data_list[0][1])
 
+
     #calculating the all time average
     sum = 0
     for element in data_list:
         sum += element[1]
     all_time_average = sum / (len(data_list))
-    print(all_time_average)
+    print('Total Average: ',all_time_average)
+
+
+    #calculating for each month
+    #average each month
+    years = []
+    for element in data_list: #extract the years available
+        print(element[0].year)
+        time = {'year':element[0].year,'month':element[0].month}
+        if(time not in years):
+            years.append(time)
+    print(years)
 
 analyser()
