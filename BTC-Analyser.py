@@ -1,9 +1,10 @@
 import sys
 import pandas as pd
 
-path = sys.argv[1]
+def analyser():
 
-def analyser(path):
+    path = input('Enter path of excel file: ')
+
     print('TEST')
     data = pd.read_excel(io=path,sheet_name='BAVERAGE-USD-Sols')
 
@@ -64,4 +65,4 @@ def analyser(path):
            
 
 
-analyser('./csv example.xlsx')
+analyser()
