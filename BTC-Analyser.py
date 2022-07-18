@@ -1,9 +1,11 @@
-import io
+import sys
 import pandas as pd
 
-def analyser():
+path = sys.argv[1]
+
+def analyser(path):
     print('TEST')
-    data = pd.read_excel(io='./csv example.xlsx',sheet_name='BAVERAGE-USD-Sols')
+    data = pd.read_excel(io=path,sheet_name='BAVERAGE-USD-Sols')
 
     #transforming dataframe to list
     data_list = data.values.tolist()
@@ -62,4 +64,4 @@ def analyser():
            
 
 
-analyser()
+analyser('./csv example.xlsx')
