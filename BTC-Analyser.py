@@ -5,12 +5,10 @@ def analyser():
 
     path = input('Enter path of excel file: ')
 
-    print('TEST')
     data = pd.read_excel(io=path,sheet_name='BAVERAGE-USD-Sols')
 
     #transforming dataframe to list
     data_list = data.values.tolist()
-    print(data_list[0][1])
 
 
     #calculating the all time average
@@ -18,18 +16,16 @@ def analyser():
     for element in data_list:
         sum += element[1]
     all_time_average = sum / (len(data_list))
-    print('Total Average: ',all_time_average)
+    print('Total Average: ',all_time_average,'$')
 
 
     #calculating for each month
     #average each month
     dates = []
     for element in data_list: #extract the years available
-        print(element[0].year)
         time = {'year':element[0].year,'month':element[0].month}
         if(time not in dates):
             dates.append(time)
-    print(dates)
 
     #calculate the average for each month
     for date in dates:
@@ -58,9 +54,9 @@ def analyser():
         
         avg_value = sum / len(values)
         print('---------',date['year'],'/',date['month'],'---------')
-        print('Min Value:',min_value)
-        print('Max Value:',max_value)
-        print('Avg Value:',avg_value)
+        print('Min Value:',min_value,'$')
+        print('Max Value:',max_value,'$')
+        print('Avg Value:',avg_value,'$')
 
            
 
